@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Interview Project
 
-## Getting Started
+Welcome to the Frontend Interview Project! This is a Next.js application designed to showcase your ability to build dynamic visualizations using JSON data. The project demonstrates how to create interactive data visualizations, handle real-time updates, and manage complex data transformations in a modern React-based environment. You'll work with JSON data sources to render beautiful, responsive charts and graphs while maintaining clean code practices and optimal performance.
 
-First, run the development server:
+## Features
+
+- **Dynamic Data Visualization**: Render charts and graphs using JSON data sources.
+- **Real-time Updates**: Handle real-time data updates and reflect changes in the UI.
+- **Clean Code Practices**: Follow best practices for code organization, readability, and maintainability.
+
+## Prerequisites
+
+- Node.js (v14 or later)
+- npm or yarn
+- Basic knowledge of React and Next.js
+
+## Setup Instructions
+
+1. **Clone the repository**:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/shodh-ai/frontend-interview.git
+  cd frontend-interview
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies**:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Run the development server**:
 
-## Learn More
+```bash
+  npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Understanding the JSON
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The JSON data structure used in this project follows a specific format designed to represent dynamic, animated content with layouts and elements. Let's break down its key components:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The root JSON object contains two main sections:
 
-## Deploy on Vercel
+- `layout`: Defines the spatial arrangement of elements
+- `elements`: Contains the actual content elements (text and equations)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Layout Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The layout uses a nested array format like `[1, [2, 3], 4]` where:
+
+- Single numbers represent standalone elements
+- Nested arrays (e.g., `[2, 3]`) represent elements that should appear side-by-side
+- The numbers correspond to element IDs in the elements array
+
+### Elements Structure
+
+Each element in the `elements` array has:
+
+- `id`: Unique identifier matching layout references
+- `type`: Either "text", "equation" or "graph"
+- `frames`: Array of content frames that control timing and content
+
+The frames contain:
+
+- `text`, `equation` or `graphs`: The actual content (varies by type)
+- `start_order`: When the frame should appear (0-based index)
+- `end_order`: When the frame should disappear (null means stay visible)
+
+For equation elements, LaTeX syntax is used for mathematical expressions. All elements support multiple frames for progressive animations or content changes.
+
+## Task
+
+Here’s what we’d like you to work on:
+
+1. **Rendering the elements**: Create a React component that can render the elements based on the layout structure. You can use libraries like and `recharts` for graphs or any library of your choice. For latex we have given a package `react-latex-next` to render latex equations. You can use any other package of your choice. The elemnts must chnage with index and should have animations when fading in and out.
+
+2. **Getting user input**: In the question you also have answer template that defines `--INSERT--` in text. You need to make a render that takes in the string and replaces the `--INSERT--` with a text input. The text input should be editable and the value should be passed to the parent component. It should also be checked for right or wrong answer given with the template itself.
+
+We’re excited to see your creativity and problem-solving skills in action. Good luck, and have fun building!

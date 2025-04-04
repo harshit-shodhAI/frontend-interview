@@ -1,0 +1,124 @@
+{
+  "layout": [
+    1,
+    [
+      2,
+      3,
+      4,
+      5
+    ]
+  ],
+  "elements": [
+    {
+      "id": 1,
+      "type": "graph",
+      "frames": [
+        {
+          "equation": [
+            "4x + 2y = 12",
+            "3x - y = 4"
+          ],
+          "point": null,
+          "start_order": 0,
+          "end_order": 1
+        },
+        {
+          "equation": [
+            "4x + 2y = 12",
+            "3x - y = 4",
+            "x = 2"
+          ],
+          "point": null,
+          "start_order": 1,
+          "end_order": 2
+        },
+        {
+          "equation": [
+            "4x + 2y = 12",
+            "3x - y = 4"
+          ],
+          "point": [
+            2,
+            2
+          ],
+          "start_order": 3,
+          "end_order": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "frames": [
+        {
+          "text": "Multiplying the second equation by 2 to align coefficients with the first equation",
+          "start_order": 0,
+          "end_order": 1
+        },
+        {
+          "text": "Adding both the equations",
+          "start_order": 1,
+          "end_order": 2
+        },
+        {
+          "text": "Substituting x in the second equation",
+          "start_order": 2,
+          "end_order": 4
+        },
+        {
+          "text": "Final solution for x and y",
+          "start_order": 4,
+          "end_order": null
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "equation",
+      "frames": [
+        {
+          "equation": "6x - 2y = 8",
+          "start_order": 0,
+          "end_order": 2
+        },
+        {
+          "equation": "3(2) - y = 4",
+          "start_order": 2,
+          "end_order": 3
+        },
+        {
+          "equation": "y = 2",
+          "start_order": 3,
+          "end_order": 4
+        },
+        {
+          "equation": "x = 2, y = 2",
+          "start_order": 4,
+          "end_order": null
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "equation",
+      "frames": [
+        {
+          "equation": "4x + 2y = 12",
+          "start_order": 1,
+          "end_order": 2
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "equation",
+      "frames": [
+        {
+          "equation": "x = 2",
+          "start_order": 1,
+          "end_order": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "question": "Solve the system of equations for \\( x \\) and \\( y \\): \n\n \\begin{equation} 4x + 2y = 12 \\end{equation} \n \\begin{equation} 3x - y = 4 \\end{equation}",
+  "answer": [
+    "Multiply the second equation by 2 to align coefficients with the first equation: \\begin{equation} 6x - 2y = 8 \\end{equation}",
+    "Add the two equations: \\begin{equation} x = 2 \\end{equation}",
+    "Substituting \\( x \\) in the second equation: \\begin{equation} 3(2) - y = 4 \\end{equation}",
+    "Solving for \\( y \\): \\begin{equation} y = 2 \\end{equation}",
+    "The solution is \\( x = 2, y = 2 \\)"
+  ],
+  "answer_template": [
+    [
+      "Multiply the second equation by --INSERT--: \\begin{equation} --INSERT-- \\end{equation}",
+      "2",
+      "6x - 2y = 8"
+    ],
+    [
+      "Add the two equations: \\begin{equation} x = --INSERT-- \\end{equation}",
+      "2"
+    ],
+    [
+      "Substituting \\( x \\) in the second equation: \\begin{equation} --INSERT-- - y = 4 \\end{equation}",
+      "6"
+    ],
+    [
+      "Solving for \\( y \\): \\begin{equation} y = --INSERT-- \\end{equation}",
+      "2"
+    ],
+    [
+      "The solution is \\( x = --INSERT--, y = --INSERT-- \\)",
+      "2",
+      "2"
+    ]
+  ]
+}
